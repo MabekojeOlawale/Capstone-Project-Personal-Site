@@ -1,179 +1,278 @@
-.main-container {
-    background-color: #BDBDB7;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
+.first-container {
+  background-color: #bdbdb7;
+  padding: 30px;
+  color: #010124;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.picture-myself {
-    border-radius: 50%;
-}
-.text-justify {
-    color: #010124
-}
-.container-1 {
-    margin-top: 0;
-    padding-top: 0;
-    height: 300px;
-    width: 400px
+.first {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
-.summary {
-    width: 100%;
-    padding-right: 100px;
+h2 {
+  text-transform: uppercase;
 }
 
-.text-justify {
-    text-align: justify;
-}
-
-.fw-normal {
-    margin-top: 20px;
-    font-weight: bolder;
-}
-
-.marketing {
-    margin-left: 40px;
-}
-
-.skills {
-    margin-left: 0;
-    padding-left: 0;
-}
-
-.skill-pictures {
-    border-radius: 50%;
-}
-
-.skills-education {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
-
-.education {
-    padding: 0;
-    margin: 0;
-}
-
-.ap {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-.ap-container {
-    display: grid;
-    grid-template-rows: 325px;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.achievement {
-    border: 3px solid white;
-}
-
-.texts {
-    float: left;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
+hr {
+  margin: 0;
 }
 
 .image {
-    display: flex;
-    justify-content: flex-end;
+  border-radius: 50%;
 }
 
-.btn {
-    display: inline;
-    width: 150px;
+.about-me {
+  text-align: justify;
+  margin: 0;
 }
 
-.link {
-    color: #010124;
+.education {
+  padding: 30px;
 }
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-li {
-    list-style: none;
-    margin-left: 10px;
+.skill-pictures {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill p,
+.skill h3 {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.third-container {
+  padding: 30px;
+}
+
+.ap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px;
+  gap: 20px;
+}
+
+.achievement,
+.project {
+  border: 3px solid white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: 300px;
+  gap: 10px;
+}
+
+.heading {
+  font-size: 20px;
+}
+
+.achievement-info,
+.project-info {
+  grid-column: span 2;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.containe {
+  background-color: #bdbdb7;
+  color: #010124;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .contact {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  color: #010124;
+}
+
+li {
+  margin-right: 10px;
+}
+
+.contact > ul {
+  padding-left: 5px;
+}
+
+.social > ul {
+  padding-left: 0;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 900px) {
+  .ap {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+  }
+
+  .project-info,
+  .achievement-info {
+    margin: 10px;
+  }
+
+  .ap-button {
+    margin-bottom: 10px;
+  }
 }
 
-.social-media {
+@media (max-width: 800px) {
+  .skills {
+    flex-direction: column;
+  }
+
+  .skill {
+    margin-bottom: 30px;
+  }
+
+  .css {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .first {
+    flex-direction: column;
+  }
+
+  .my-image {
+    align-self: center;
+    margin-top: 30px;
+  }
+
+  .containe {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social > ul {
+    padding-left: 0;
+  }
+
+  .copyright {
+    margin-bottom: 15px;
+  }
+
+  .contact {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .first-container {
+    padding: 15px;
+  }
+
+  .image {
+    width: 200px;
+  }
+  .name {
+    font-size: 14px;
+  }
+
+  .my-name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5rem;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .education {
+    padding: 15px;
+  }
+
+  .skill-pictures {
+    width: 100px;
+    height: 100px;
+  }
+
+  .third-container {
+    padding: 15px;
+  }
+
+  .third-container h3 {
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 450px) {
+  .achievement,
+  .project {
     display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+  .skill {
+    align-items: flex-start;
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .skill p,
+  .skill h3 {
+    text-align: start;
+  }
+  .extra {
+    margin-left: 20px;
+    align-self: center;
+  }
 }
-
-@media (max-width:1100px) {
-    .text-body-emphasis {
-        padding-left: 0;
-    }
-
-    .fw-normal {
-        margin-top: 20px;
-    }
-
-    .skill-summary {
-        margin-bottom: 50px;
-    }
-
-    .ap-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .achievement {
-        display: block;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .image {
-        height: 350px;
-    }
-}
-
-@media (max-width:700px) {
-    html, body {
-        overflow-x: hidden;
-    }
-
-    body {
-        position: relative;
-    }
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow-x: inherit;
-        margin-right: 0;
-        width: auto;
-    }
-
-    .copyright {
-        margin-left: 25px;
-    }
-
-    .contact {
-        margin-top: 15px;
-    }
-
-    .about-me {
-        width: 100%;
-        padding-right: 50px;
-    }
-} 
